@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1150px;
+  margin: 35px auto auto auto;
+  padding: 0.8125rem;
+  gap: 1.75rem;
+}
+
+@media (max-width: 480px) {
+  .main {
+    margin: 15px auto auto auto;
+  }
+}

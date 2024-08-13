@@ -1,0 +1,64 @@
+.button {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 13px !important;
+  background-color: transparent;
+  box-shadow: 2px 5px 8px 6px rgba(204, 204, 204, 0.34);
+  cursor: pointer;
+  border: none;
+}
+
+.lista {
+  list-style: none;
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: 2px 5px 8px 6px rgba(204, 204, 204, 0.34);
+  display: none;
+  animation: animeList 0.5s forwards;
+}
+
+.list {
+  display: block;
+}
+
+.rotate {
+  animation: rotateIn 0.5s forwards;
+}
+
+.lista li {
+  font-size: 20px;
+  padding: 7px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.lista li:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+@keyframes animeList {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

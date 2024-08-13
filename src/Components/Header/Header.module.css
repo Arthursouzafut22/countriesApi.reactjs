@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1250px;
+  border: 1px solid;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 0 auto;
+}
+.header p {
+  font-size: clamp(15px, 4vw, 16px);
+  font-weight: 600;
+  color: #212121;
+}
+.header button {
+  font-size: clamp(15px, 4vw, 16px);
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  gap: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=Header.module.css.map */

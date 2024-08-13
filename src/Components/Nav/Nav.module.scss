@@ -1,0 +1,51 @@
+@mixin flexCenter($options) {
+  display: flex;
+  align-items: center;
+  justify-content: $options;
+}
+
+$whiteColor: #ffffff;
+
+nav {
+  padding: 0.8125rem;
+
+  .wrapper {
+    @include flexCenter(space-between);
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-top: 25px;
+
+    .searchContainer {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .serachIcon {
+        position: absolute;
+        font-size: 1.125rem;
+        left: 10px;
+        color: #888;
+      }
+    }
+
+    .input {
+      font-size: 1rem;
+      display: block;
+      border-radius: 6px;
+      padding: 0.5rem 0.5rem 0.5rem 1.875rem;
+      border: none;
+      outline: none;
+      background: $whiteColor;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    @include flexCenter(initial);
+    flex-wrap: wrap;
+    gap: 0.9375rem;
+  }
+}

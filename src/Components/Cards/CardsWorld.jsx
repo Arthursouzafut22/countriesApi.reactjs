@@ -9,16 +9,16 @@ const CardsWorld = () => {
 
   const renderCardWord = (item) => (
     <Link
-      to={`country/${item.name}`}
+      to={`country/${encodeURIComponent(item?.name)}`}
       key={item.name}
       className={styles.cards}
       style={{ ...colorWhite, ...backgroundColor }}
     >
-      <img src={item?.flag} alt="imagem" />
+      <img src={item?.flag} alt={`${item?.name} flag`} />
       <div className={styles.wrapperCards}>
         <p>{item?.name}</p>
         <p>
-          Population: <span>{item?.population}</span>
+          Population: <span>{item?.population?.toLocaleString()}</span>
         </p>
         <p>
           Region: <span>{item?.region}</span>
@@ -29,6 +29,7 @@ const CardsWorld = () => {
       </div>
     </Link>
   );
+
   const cardsToRender =
     searchCountry.length > 0
       ? searchCountry

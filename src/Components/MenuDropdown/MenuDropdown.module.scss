@@ -17,8 +17,7 @@ $whittColor: #ffffff;
     border-radius: 0.375rem;
     cursor: pointer;
     background: $whittColor;
-    max-width: 200px;
-    width: 100%;
+    position: relative;
 
     .rotate {
       animation: animeRotate 0.3s forwards;
@@ -31,9 +30,10 @@ $whittColor: #ffffff;
     background: $whittColor;
     position: absolute;
     top: 65%;
-    overflow: auto;
-    max-width: 132px;
-    width: 100%;
+
+    left: 0;
+    min-width: 87%;
+
     border-radius: 0.375rem;
     box-shadow: 2px 5px 7px -1px rgba(5, 5, 5, 0.35);
     animation: dropDawn 0.5s ease-in-out;

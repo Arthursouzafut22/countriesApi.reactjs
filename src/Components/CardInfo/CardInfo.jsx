@@ -8,11 +8,10 @@ import { Link } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
 
 const CardInfo = () => {
-  const { data, isLoading, error } = useResquestAxiosGet();
+  const { isLoading, error } = useResquestAxiosGet();
   const { name } = useParams();
-  const country = data?.find((item) => item?.name === name);
-  const { backgroundColor, colorWhite } = useContext(UseContexto);
-
+  const { backgroundColor, colorWhite, data } = useContext(UseContexto);
+  const country = data?.find((item) => item.name === name);
   return (
     <>
       <section className={styles.info}>
@@ -27,7 +26,7 @@ const CardInfo = () => {
         {country ? (
           <div className={styles.wrapper}>
             <div className={styles.ccImg}>
-              <img src={country?.flag} alt="imagen" />
+              <img src={country?.flag} alt="imagem" />
             </div>
             <div className={styles.conatinerInfo}>
               <div className={styles.wrapper1} style={{ ...colorWhite }}>
@@ -70,5 +69,4 @@ const CardInfo = () => {
     </>
   );
 };
-
 export default CardInfo;
